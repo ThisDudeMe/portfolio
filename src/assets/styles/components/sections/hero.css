@@ -1,49 +1,46 @@
 .hero {
-  min-height: 100vh;
+  min-height: var(--section-height);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--hero-gradient);
-  color: var(--color-white);
   text-align: center;
-  padding-top: var(--header-height);
+  padding: var(--spacing-xlarge) var(--spacing-large);
+  background-color: var(--secondary-bg);
 }
 
 .hero-content h1 {
-  font-size: var(--font-size-4xl);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-tight);
-  margin-bottom: var(--spacing-sm);
+  font-size: var(--font-size-xlarge);
+  margin-bottom: var(--spacing-xlarge);
+  color: var(--text-color);
 }
 
-.hero-content p {
-  font-size: var(--font-size-xl);
-  line-height: var(--line-height-normal);
-  margin-bottom: var(--spacing-lg);
-  opacity: 0.9;
-  max-width: 600px;
+.typing-text {
+  color: var(--standout-color);
+  font-weight: bold;
+}
+
+.cursor {
+  color: var(--standout-color);
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
 }
 
 .cta-button {
-  background: var(--color-white);
-  color: var(--color-primary);
-  border: none;
-  padding: var(--spacing-sm) var(--spacing-xl);
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  padding: var(--spacing-medium) var(--spacing-large);
   font-size: var(--font-size-base);
-  font-weight: var(--font-weight-semibold);
-  border-radius: var(--border-radius-lg);
-  cursor: pointer;
-  transition:
-    transform var(--transition-base),
-    box-shadow var(--transition-base);
-  box-shadow: var(--shadow-base);
+  transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
-}
-
-.cta-button:active {
-  transform: translateY(0);
+  background-color: var(--hover-highlight);
 }

@@ -1,0 +1,25 @@
+:root {
+    --header-footer-bg: #000000;
+    --secondary-bg: #14213d;
+    --hover-highlight: #4493d4;
+    --standout-color: #fca311;
+    --text-color: #e5e5e5;
+    --accent-color: #0066cc;
+    --background-color: #ffffff;
+    --border-color: #ddd;
+
+    --font-family: 'Arial', sans-serif;
+    --font-size-base: 16px;
+    --font-size-large: 24px;
+    --font-size-xlarge: 32px;
+
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 32px;
+    --spacing-xlarge: 64px;
+  
+    --border-radius: 4px;
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    --section-height: 100vh;
+}

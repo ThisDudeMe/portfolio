@@ -1,59 +1,43 @@
 import React from 'react';
-import { useTheme } from '../../contexts/ThemeContext';
 import '../../assets/styles/components/layout/header.css';
 
 const Header = () => {
-    const { theme, toggleTheme, isDark } = useTheme();
-
     return (
         <header className="header">
             <nav className="nav">
-                <div className="logo">
-                    <h2>Your Name</h2>
-                </div>
+                <div className="nav-brand">Ervin Török</div>
+
                 <ul className="nav-links">
-                    <li className="nav-item">
-                        <a href="#home">Home</a>
-                        <div className="dropdown">
-                            <div className="option">Option 1</div>
-                            <div className="option">Option 2</div>
-                            <div className="option">Option 3</div>
-                        </div>
-                    </li>
-                    <li className="nav-item">
+                    <li><a href="#home">Home</a></li>
+
+                    <li className="dropdown">
                         <a href="#about">About</a>
-                        <div className="dropdown">
-                            <div className="option">Option 1</div>
-                            <div className="option">Option 2</div>
-                            <div className="option">Option 3</div>
-                        </div>
+                        <ul className="dropdown-menu">
+                            <li><a href="#about-me">About Me</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#experience">Experience</a></li>
+                            <li><a href="#education">Education</a></li>
+                        </ul>
                     </li>
-                    <li className="nav-item">
+
+                    <li className="dropdown">
                         <a href="#projects">Projects</a>
-                        <div className="dropdown">
-                            <div className="option">Option 1</div>
-                            <div className="option">Option 2</div>
-                            <div className="option">Option 3</div>
-                        </div>
+                        <ul className="dropdown-menu">
+                            <li><a href="#web-projects">Web Development</a></li>
+                            <li><a href="#mobile-projects">Mobile Apps</a></li>
+                            <li><a href="#data-projects">Data Science</a></li>
+                            <li><a href="#open-source">Open Source</a></li>
+                        </ul>
                     </li>
-                    <li className="nav-item">
+
+                    <li className="dropdown">
                         <a href="#contact">Contact</a>
-                        <div className="dropdown">
-                            <div className="option">Option 1</div>
-                            <div className="option">Option 2</div>
-                            <div className="option">Option 3</div>
-                        </div>
-                    </li>
-                    <li className="nav-item theme-toggle-item">
-                        <button
-                            className="theme-toggle"
-                            onClick={toggleTheme}
-                            aria-label={`Switch to ${isDark ? 'light' : 'dark'} theme`}
-                        >
-                            <span className="theme-toggle-icon">
-                                {isDark ? '☀️' : '🌙'}
-                            </span>
-                        </button>
+                        <ul className="dropdown-menu">
+                            <li><a href="#email">Email</a></li>
+                            <li><a href="#linkedin">LinkedIn</a></li>
+                            <li><a href="#github">GitHub</a></li>
+                            <li><a href="#resume">Resume</a></li>
+                        </ul>
                     </li>
                 </ul>
             </nav>
