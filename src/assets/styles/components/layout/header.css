@@ -147,6 +147,21 @@
   display: none;
 }
 
+/* Icon styles */
+.nav-icon {
+  display: inline-flex;
+  margin-right: 6px;
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+.dropdown-icon {
+  display: inline-flex;
+  margin-right: 6px;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   .header {
@@ -174,5 +189,10 @@
   .dropdown-menu li a {
     padding: 6px var(--spacing-small);
     font-size: 12px;
+  }
+
+  .nav-icon, .dropdown-icon {
+    font-size: 14px;
+    margin-right: 4px;
   }
 }

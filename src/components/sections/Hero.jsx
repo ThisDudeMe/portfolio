@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import profile from '../../data/profile';
 import '../../assets/styles/components/sections/hero.css';
 
 const Hero = () => {
@@ -7,11 +8,7 @@ const Hero = () => {
     const [isDeleting, setIsDeleting] = useState(false);
     const [charIndex, setCharIndex] = useState(0);
 
-    const texts = [
-        'a Software Engineer',
-        'a System Designer',
-        'an AI Developer'
-    ];
+    const texts = profile.typingTexts;
 
     useEffect(() => {
         const currentText = texts[currentIndex];
@@ -44,7 +41,7 @@ const Hero = () => {
         <section className="hero" id="home">
             <div className="hero-content">
                 <h1>
-                    Hi! I'm Ervin and I'm{' '}
+                    Hi! I'm {profile.name.split(' ')[0]} and I'm{' '}
                     <span className="typing-text">
                         {displayText}
                         <span className="cursor">|</span>
