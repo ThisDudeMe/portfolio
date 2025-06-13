@@ -1,25 +1,170 @@
+/* Base Variables - shared across themes */
 :root {
-    --header-footer-bg: #000000;
-    --secondary-bg: #14213d;
-    --hover-highlight: #4493d4;
-    --standout-color: #fca311;
-    --text-color: #e5e5e5;
-    --accent-color: #0066cc;
-    --background-color: #ffffff;
-    --border-color: #ddd;
+  /* Font and spacing variables */
+  --font-family: 'Arial', sans-serif;
+  --font-size-base: 16px;
+  --font-size-large: 24px;
+  --font-size-xlarge: 32px;
 
-    --font-family: 'Arial', sans-serif;
-    --font-size-base: 16px;
-    --font-size-large: 24px;
-    --font-size-xlarge: 32px;
-
-    --spacing-small: 8px;
-    --spacing-medium: 16px;
-    --spacing-large: 32px;
-    --spacing-xlarge: 64px;
+  --spacing-small: 8px;
+  --spacing-medium: 16px;
+  --spacing-large: 32px;
+  --spacing-xlarge: 64px;
   
-    --border-radius: 4px;
-    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --border-radius: 4px;
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
-    --section-height: 100vh;
+  --section-height: 100vh;
+  
+  /* Animation for theme transitions */
+  --theme-transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Light Theme Colors */
+:root.light-theme {
+  --header-footer-bg: #ffffff;
+  --secondary-bg: #f5f5f5;
+  --hover-highlight: #0077cc;
+  --standout-color: #ff9800;
+  --text-color: #333333;
+  --accent-color: #0066cc;
+  --background-color: #ffffff;
+  --border-color: #dddddd;
+  
+  /* Additional colors for light mode */
+  --card-bg: #ffffff;
+  --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --input-bg: #f9f9f9;
+  --timeline-bg: rgba(0, 119, 204, 0.1);
+  --skill-tag-bg: rgba(0, 119, 204, 0.1);
+  --dropdown-bg: #ffffff;
+  --overlay-bg: rgba(255, 255, 255, 0.8);
+  --social-icon-bg: rgba(0, 119, 204, 0.1);
+  --footer-border: rgba(0, 0, 0, 0.1);
+  --hover-text: #0077cc;
+  --project-card-bg: #ffffff;
+
+  /* Error color */
+  --error-color: #e74c3c;
+}
+
+/* Dark Theme Colors */
+:root.dark-theme {
+  --header-footer-bg: #121212;
+  --secondary-bg: #1e1e1e;
+  --hover-highlight: #4493d4;
+  --standout-color: #fca311;
+  --text-color: #e5e5e5;
+  --accent-color: #0066cc;
+  --background-color: #121212;
+  --border-color: #444444;
+  
+  /* Additional colors for dark mode */
+  --card-bg: #2d2d2d;
+  --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  --input-bg: #333333;
+  --timeline-bg: rgba(68, 147, 212, 0.1);
+  --skill-tag-bg: rgba(68, 147, 212, 0.1);
+  --dropdown-bg: #1a1a1a;
+  --overlay-bg: rgba(0, 0, 0, 0.8);
+  --social-icon-bg: rgba(68, 147, 212, 0.1);
+  --footer-border: rgba(255, 255, 255, 0.1);
+  --hover-text: #4493d4;
+  --project-card-bg: rgba(20, 33, 61, 0.8);
+
+  /* Error color */
+  --error-color: #ff6b6b;
+}
+
+/* Default to dark theme if no class is specified */
+:root {
+  --header-footer-bg: #121212;
+  --secondary-bg: #1e1e1e;
+  --hover-highlight: #4493d4;
+  --standout-color: #fca311;
+  --text-color: #e5e5e5;
+  --accent-color: #0066cc;
+  --background-color: #121212;
+  --border-color: #444444;
+  
+  --card-bg: #2d2d2d;
+  --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  --input-bg: #333333;
+  --timeline-bg: rgba(68, 147, 212, 0.1);
+  --skill-tag-bg: rgba(68, 147, 212, 0.1);
+  --dropdown-bg: #1a1a1a;
+  --overlay-bg: rgba(0, 0, 0, 0.8);
+  --social-icon-bg: rgba(68, 147, 212, 0.1);
+  --footer-border: rgba(255, 255, 255, 0.1);
+  --hover-text: #4493d4;
+  --project-card-bg: rgba(20, 33, 61, 0.8);
+
+  /* Error color */
+  --error-color: #ff6b6b;
+}
+
+/* Apply transitions to key elements to make theme switching smooth */
+body,
+.header,
+.footer,
+.project-card,
+.contact-card,
+.contact-form-wrapper,
+.timeline-content,
+button,
+input,
+textarea,
+.skill-tag,
+.tech-tag,
+.dropdown-menu {
+  transition: var(--theme-transition);
+}
+
+/* Theme-specific adjustments for better contrast/readability */
+.light-theme .social-icon {
+  background-color: var(--social-icon-bg);
+}
+
+.dark-theme .social-icon {
+  background-color: var(--social-icon-bg);
+}
+
+.light-theme .footer,
+.light-theme .header {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dark-theme .footer,
+.dark-theme .header {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Project cards adjustments */
+.light-theme .project-card,
+.light-theme .contact-card,
+.light-theme .contact-form-wrapper {
+  background-color: var(--card-bg);
+  box-shadow: var(--card-shadow);
+}
+
+.dark-theme .project-card,
+.dark-theme .contact-card,
+.dark-theme .contact-form-wrapper {
+  background-color: var(--card-bg);
+  box-shadow: var(--card-shadow);
+}
+
+/* Form elements adjustments */
+.light-theme input,
+.light-theme textarea {
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+.dark-theme input,
+.dark-theme textarea {
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  border-color: var(--border-color);
 }

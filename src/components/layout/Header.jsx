@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import profile from '../../data/profile';
-import { navigationIcons, socialIcons } from '../../data/icons'; // Import icons from centralized file
+import { navigationIcons, socialIcons } from '../../data/icons';
+import IconHolder from '../common/IconHolder';
 import '../../assets/styles/components/layout/header.css';
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
-    const [activeDropdown, setActiveDropdown] = useState(null);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -16,12 +16,8 @@ const Header = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const handleDropdownToggle = (dropdown) => {
-        setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
-    };
-
     const handleLinkClick = () => {
-        setActiveDropdown(null);
+        // Simplified function for closing mobile menu in the future if needed
     };
 
     return (
@@ -32,13 +28,23 @@ const Header = () => {
                 <ul className="nav-links">
                     <li>
                         <a href="#home" onClick={handleLinkClick}>
-                            <span className="nav-icon">{navigationIcons.home}</span> Home
+                            <IconHolder
+                                icon={navigationIcons.home}
+                                size="small"
+                                className="nav-icon-holder"
+                            />
+                            Home
                         </a>
                     </li>
 
                     <li className="dropdown">
                         <a href="#about" onClick={handleLinkClick}>
-                            <span className="nav-icon">{navigationIcons.about}</span> About
+                            <IconHolder
+                                icon={navigationIcons.about}
+                                size="small"
+                                className="nav-icon-holder"
+                            />
+                            About
                         </a>
                         <ul className="dropdown-menu">
                             <li><a href="#about-me" onClick={handleLinkClick}>About Me</a></li>
@@ -49,7 +55,12 @@ const Header = () => {
 
                     <li className="dropdown">
                         <a href="#projects" onClick={handleLinkClick}>
-                            <span className="nav-icon">{navigationIcons.projects}</span> Projects
+                            <IconHolder
+                                icon={navigationIcons.projects}
+                                size="small"
+                                className="nav-icon-holder"
+                            />
+                            Projects
                         </a>
                         <ul className="dropdown-menu">
                             <li><a href="#web-projects" onClick={handleLinkClick}>Web Development</a></li>
@@ -61,7 +72,12 @@ const Header = () => {
 
                     <li className="dropdown">
                         <a href="#contact" onClick={handleLinkClick}>
-                            <span className="nav-icon">{navigationIcons.contact}</span> Contact
+                            <IconHolder
+                                icon={navigationIcons.contact}
+                                size="small"
+                                className="nav-icon-holder"
+                            />
+                            Contact
                         </a>
                         <ul className="dropdown-menu">
                             <li>
@@ -69,7 +85,12 @@ const Header = () => {
                                     href={`mailto:${profile.email}`}
                                     onClick={handleLinkClick}
                                 >
-                                    <span className="dropdown-icon">{socialIcons.email}</span> Email
+                                    <IconHolder
+                                        icon={socialIcons.email}
+                                        size="small"
+                                        className="dropdown-icon-holder"
+                                    />
+                                    Email
                                 </a>
                             </li>
                             <li>
@@ -79,7 +100,12 @@ const Header = () => {
                                     rel="noopener noreferrer"
                                     onClick={handleLinkClick}
                                 >
-                                    <span className="dropdown-icon">{socialIcons.linkedin}</span> LinkedIn
+                                    <IconHolder
+                                        icon={socialIcons.linkedin}
+                                        size="small"
+                                        className="dropdown-icon-holder"
+                                    />
+                                    LinkedIn
                                 </a>
                             </li>
                             <li>
@@ -89,7 +115,12 @@ const Header = () => {
                                     rel="noopener noreferrer"
                                     onClick={handleLinkClick}
                                 >
-                                    <span className="dropdown-icon">{socialIcons.github}</span> GitHub
+                                    <IconHolder
+                                        icon={socialIcons.github}
+                                        size="small"
+                                        className="dropdown-icon-holder"
+                                    />
+                                    GitHub
                                 </a>
                             </li>
                             <li>
@@ -99,7 +130,12 @@ const Header = () => {
                                     rel="noopener noreferrer"
                                     onClick={handleLinkClick}
                                 >
-                                    <span className="dropdown-icon">{socialIcons.resume}</span> Resume
+                                    <IconHolder
+                                        icon={socialIcons.resume}
+                                        size="small"
+                                        className="dropdown-icon-holder"
+                                    />
+                                    Resume
                                 </a>
                             </li>
                         </ul>

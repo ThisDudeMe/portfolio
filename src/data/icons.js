@@ -3,14 +3,14 @@ import React from 'react';
 // Programming Languages
 import { TiHtml5 } from "react-icons/ti";
 import { SiCsswizardry, SiUnrealengine, SiDavinciresolve, SiSqlite, SiMysql, SiFlask, SiPostman } from "react-icons/si";
-import { FaPython, FaJs, FaReact, FaUnity, FaDocker, FaGithub, FaLinkedin, FaInfoCircle, FaPhoneSquare } from "react-icons/fa";
+import { FaPython, FaJs, FaReact, FaUnity, FaDocker, FaGithub, FaLinkedin, FaInfoCircle, FaPhoneSquare, FaGraduationCap } from "react-icons/fa";
 import { TbBrandCSharp, TbBrandDjango, TbFileCv } from "react-icons/tb";
 import { BsFiletypeJsx } from "react-icons/bs";
 import { AiOutlineConsoleSql } from "react-icons/ai";
 import { DiVisualstudio } from "react-icons/di";
 
 // Navigation & Contact
-import { MdEmail } from "react-icons/md";
+import { MdEmail, MdWork } from "react-icons/md";
 import { IoHome } from "react-icons/io5";
 import { LuContact } from "react-icons/lu";
 import { GrProjects } from "react-icons/gr";
@@ -60,6 +60,12 @@ export const navigationIcons = {
     phone: <FaPhoneSquare />,
 };
 
+// Timeline Icons
+export const timelineIcons = {
+    work: <MdWork />,
+    education: <FaGraduationCap />,
+};
+
 // Icon metadata for IconShowcase
 export const iconMetadata = {
     // Programming Languages
@@ -97,6 +103,10 @@ export const iconMetadata = {
     projects: { icon: <GrProjects />, name: "GrProjects" },
     location: { icon: <FaLocationDot />, name: "FaLocationDot" },
     phone: { icon: <FaPhoneSquare />, name: "FaPhoneSquare" },
+
+    // Timeline
+    work: { icon: <MdWork />, name: "MdWork" },
+    education: { icon: <FaGraduationCap />, name: "FaGraduationCap" },
 };
 
 // All icons grouped by category for the showcase component
@@ -147,16 +157,23 @@ export const iconSets = [
             iconMetadata.projects,
             iconMetadata.location,
             iconMetadata.phone,
+            iconMetadata.work,
+            iconMetadata.education,
         ]
     }
 ];
 
-export default {
+// Create a named object for the export
+const icons = {
     programmingIcons,
     toolIcons,
     socialIcons,
     navigationIcons,
+    timelineIcons,
     iconMetadata,
     iconSets
 };
+
+// Export the named object
+export default icons;
 

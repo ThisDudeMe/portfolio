@@ -42,7 +42,7 @@
 }
 
 .contact-card {
-  background-color: rgba(20, 33, 61, 0.8);
+  background-color: var(--card-bg); /* Was rgba(20, 33, 61, 0.8) */
   border-radius: 10px;
   padding: var(--spacing-large);
   transition: all 0.3s ease;
@@ -89,10 +89,10 @@
 }
 
 .contact-form-wrapper {
-  background-color: rgba(20, 33, 61, 0.8);
+  background-color: var(--card-bg); /* Was rgba(20, 33, 61, 0.8) */
   border-radius: 10px;
   padding: var(--spacing-large);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--card-shadow); /* Was 0 5px 15px rgba(0, 0, 0, 0.2) */
 }
 
 .contact-form-wrapper h3 {

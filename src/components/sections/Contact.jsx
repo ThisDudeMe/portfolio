@@ -2,7 +2,8 @@ import React from 'react';
 import ContactForm from '../common/ContactForm';
 import useEmailJS from '../../hooks/useEmailJS';
 import profile from '../../data/profile';
-import { socialIcons } from '../../data/icons'; // Import icons from centralized file
+import { socialIcons } from '../../data/icons';
+import IconHolder from '../common/IconHolder';
 import '../../assets/styles/components/sections/contact.css';
 
 const Contact = () => {
@@ -35,7 +36,7 @@ const Contact = () => {
                     <div className="contact-info">
                         <div className="contact-card">
                             <div className="contact-icon">
-                                {socialIcons.email}
+                                <IconHolder icon={socialIcons.email} size="large" />
                             </div>
                             <h3>Email</h3>
                             <p>
@@ -50,7 +51,7 @@ const Contact = () => {
 
                         <div className="contact-card">
                             <div className="contact-icon">
-                                {socialIcons.linkedin}
+                                <IconHolder icon={socialIcons.linkedin} size="large" />
                             </div>
                             <h3>LinkedIn</h3>
                             <p>
@@ -65,7 +66,7 @@ const Contact = () => {
 
                         <div className="contact-card">
                             <div className="contact-icon">
-                                {socialIcons.github}
+                                <IconHolder icon={socialIcons.github} size="large" />
                             </div>
                             <h3>GitHub</h3>
                             <p>
@@ -80,7 +81,7 @@ const Contact = () => {
 
                         <div className="contact-card">
                             <div className="contact-icon">
-                                {socialIcons.resume}
+                                <IconHolder icon={socialIcons.resume} size="large" />
                             </div>
                             <h3>Resume</h3>
                             <p>

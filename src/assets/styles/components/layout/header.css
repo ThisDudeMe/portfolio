@@ -40,6 +40,8 @@
   border-radius: var(--border-radius);
   transition: all 0.3s ease;
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .nav-links li a:hover {
@@ -122,7 +124,8 @@
   font-weight: 400;
   border-radius: 0;
   transition: all 0.3s ease;
-  display: block;
+  display: flex;
+  align-items: center;
   text-align: center;
   white-space: nowrap;
 }
@@ -138,7 +141,7 @@
 }
 
 .dropdown-menu li a:hover {
-  background-color: #3a3a3a;
+  background-color: var(--card-bg); /* Was #3a3a3a */
   color: var(--hover-highlight);
   transform: scale(1.02);
 }
@@ -148,21 +151,13 @@
 }
 
 /* Icon styles */
-.nav-icon {
-  display: inline-flex;
-  margin-right: 6px;
-  font-size: 16px;
-  vertical-align: middle;
-}
-
-.dropdown-icon {
-  display: inline-flex;
-  margin-right: 6px;
+.nav-icon-holder {
+  width: 24px;
+  height: 24px;
   font-size: 14px;
-  vertical-align: middle;
+  margin-right: 8px;
 }
 
-/* Mobile responsiveness */
 @media (max-width: 768px) {
   .header {
     padding: var(--spacing-small) var(--spacing-medium);
@@ -191,8 +186,10 @@
     font-size: 12px;
   }
 
-  .nav-icon, .dropdown-icon {
-    font-size: 14px;
-    margin-right: 4px;
+  .nav-icon-holder {
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    margin-right: 6px;
   }
 }

@@ -6,7 +6,7 @@ import Hero from './components/sections/Hero';
 import About from './components/sections/About';
 import Projects from './components/sections/Projects';
 import Contact from './components/sections/Contact';
-import IconShowcase from './components/sections/IconShowcase';
+import ThemeToggle from './components/common/ThemeToggle'; // Import the ThemeToggle component
 
 function App() {
   return (
@@ -18,10 +18,10 @@ function App() {
         <About />
         <Projects />
         <Contact />
-        <IconShowcase /> {/* Add this line to include the icon showcase */}
       </main>
 
       <Footer />
+      <ThemeToggle /> {/* Add the theme toggle button */}
     </div>
   );
 }
