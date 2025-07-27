@@ -3,7 +3,7 @@
   position: relative;
   max-width: 800px;
   margin: 0 auto;
-  height: 500px; /* Fixed height to enable scrolling */
+  height: 1000px; /* Fixed height to enable scrolling */
   overflow: hidden; /* Hide overflow by default */
   padding: var(--spacing-large) 0;
 }
