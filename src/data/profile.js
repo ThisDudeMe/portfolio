@@ -1,19 +1,19 @@
 const profile = {
     name: "Ervin Török",
     title: "Software Engineer",
-    email: "yourname@example.com",
+    email: "ervin398@gmail.com",
     social: {
         linkedin: {
-            url: "https://linkedin.com/in/yourprofile",
-            username: "yourprofile"
+            url: "https://linkedin.com/in/ervintorok",
+            username: "ervintorok"
         },
         github: {
-            url: "https://github.com/yourusername",
-            username: "yourusername"
+            url: "https://github.com/ThisDudeMe",
+            username: "ThisDudeMe"
         }
     },
     resume: {
-        url: "https://drive.google.com/file/d/YOUR_GOOGLE_DRIVE_FILE_ID/view?usp=sharing",
+        url: "https://drive.google.com/file/d/1gL3EVlHsKoXz5LihdOS4qBxjPLIJSbav/view?usp=sharing",
         displayText: "View Resume"
     },
     contact: {

@@ -2,10 +2,18 @@ import React from 'react';
 import profile from '../../data/profile';
 import { socialIcons, navigationIcons, toolIcons } from '../../data/icons';
 import IconHolder from '../common/IconHolder';
+import { scrollToSection } from '../../utils/scrollUtils';
 import '../../assets/styles/components/layout/footer.css';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+
+  const handleLinkClick = (e) => {
+    e.preventDefault();
+    const href = e.currentTarget.getAttribute('href');
+    const elementId = href.replace('#', '');
+    scrollToSection(elementId);
+  };
 
   return (
     <footer className="footer">
@@ -22,25 +30,25 @@ const Footer = () => {
             <h3>Quick Links</h3>
             <ul className="footer-links">
               <li>
-                <a href="#home">
+                <a href="#home" onClick={handleLinkClick}>
                   <IconHolder icon={navigationIcons.home} size="small" className="footer-icon" />
                   <span>Home</span>
                 </a>
               </li>
               <li>
-                <a href="#about">
+                <a href="#about" onClick={handleLinkClick}>
                   <IconHolder icon={navigationIcons.about} size="small" className="footer-icon" />
                   <span>About</span>
                 </a>
               </li>
               <li>
-                <a href="#projects">
+                <a href="#projects" onClick={handleLinkClick}>
                   <IconHolder icon={navigationIcons.projects} size="small" className="footer-icon" />
                   <span>Projects</span>
                 </a>
               </li>
               <li>
-                <a href="#contact">
+                <a href="#contact" onClick={handleLinkClick}>
                   <IconHolder icon={navigationIcons.contact} size="small" className="footer-icon" />
                   <span>Contact</span>
                 </a>

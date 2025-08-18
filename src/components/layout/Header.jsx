@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import profile from '../../data/profile';
 import { navigationIcons, socialIcons } from '../../data/icons';
 import IconHolder from '../common/IconHolder';
+import { scrollToSection } from '../../utils/scrollUtils';
 import '../../assets/styles/components/layout/header.css';
 
 const Header = () => {
@@ -16,8 +17,11 @@ const Header = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const handleLinkClick = () => {
-        // Simplified function for closing mobile menu in the future if needed
+    const handleLinkClick = (e) => {
+        e.preventDefault();
+        const href = e.currentTarget.getAttribute('href');
+        const elementId = href.replace('#', '');
+        scrollToSection(elementId);
     };
 
     return (
@@ -47,9 +51,9 @@ const Header = () => {
                             About
                         </a>
                         <ul className="dropdown-menu">
-                            <li><a href="#about-me" onClick={handleLinkClick}>About Me</a></li>
+                            <li><a href="#aboutMe" onClick={handleLinkClick}>About Me</a></li>
                             <li><a href="#skills" onClick={handleLinkClick}>Skills</a></li>
-                            <li><a href="#experience & education" onClick={handleLinkClick}>Experience & Education</a></li>
+                            <li><a href="#experience" onClick={handleLinkClick}>Experience & Education</a></li>
                         </ul>
                     </li>
 

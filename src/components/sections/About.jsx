@@ -10,54 +10,32 @@ const About = () => {
   const timelineItems = [
     {
       type: 'work',
-      title: 'Senior Software Engineer',
-      organization: 'Tech Solutions Inc.',
-      date: '2022 - Present',
-      description: 'Led development of scalable web applications using React and Node.js. Implemented AI-powered features that improved user engagement by 40%.'
+      title: 'AI Developer',
+      organization: 'Spelinsikt',
+      date: '2025',
+      description: 'Developed AI-driven solutions for helping users with gambling problems.'
     },
     {
       type: 'work',
-      title: 'Full Stack Developer',
-      organization: 'Digital Innovations Ltd.',
-      date: '2020 - 2022',
-      description: 'Developed and maintained multiple client projects using modern web technologies. Collaborated with cross-functional teams to deliver high-quality solutions.'
+      title: 'Full Stack Developer with focus on Data Analysis',
+      organization: 'Mappi',
+      date: '2024 - 2025',
+      description: 'Developed a communicaton system between database and ai for helpin studets with math problems.'
     },
     {
       type: 'education',
-      title: 'Master of Science in Computer Science',
-      organization: 'University of Technology',
-      date: '2018 - 2020',
-      description: 'Specialized in Artificial Intelligence and Machine Learning. Thesis focused on neural networks for natural language processing.'
-    },
-    {
-      type: 'work',
-      title: 'Junior Developer',
-      organization: 'StartUp Ventures',
-      date: '2018 - 2020',
-      description: 'Built responsive web applications and mobile apps. Gained experience in agile development methodologies and version control systems.'
+      title: 'AI Developer',
+      organization: 'Jensen Yrkeshögskola',
+      date: '2023 - 2025',
+      description: 'Studied software development with a focus on AI and machine learning. Gained hands-on experience in building intelligent systems.'
     },
     {
       type: 'education',
-      title: 'Bachelor of Science in Software Engineering',
-      organization: 'State University',
-      date: '2014 - 2018',
-      description: 'Strong foundation in software development principles, algorithms, and data structures. Graduated Magna Cum Laude.'
+      title: 'Game Developer',
+      organization: 'Futuregames',
+      date: '2021 - 2022',
+      description: 'Learned game development principles and practices, focusing on Unity and Unreal Engine. Developed skills in C# and game design.'
     },
-    // Additional items to demonstrate scrolling
-    {
-      type: 'work',
-      title: 'Software Development Intern',
-      organization: 'Tech Innovators',
-      date: '2013 - 2014',
-      description: 'Assisted in developing front-end components and participated in code reviews. Learned practical application of software engineering principles.'
-    },
-    {
-      type: 'education',
-      title: 'Web Development Bootcamp',
-      organization: 'Code Academy',
-      date: 'Summer 2013',
-      description: 'Intensive three-month program focused on modern web development technologies and practices.'
-    }
   ];
 
   return (
