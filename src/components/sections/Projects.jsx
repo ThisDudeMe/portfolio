@@ -6,7 +6,7 @@ const Projects = () => {
     const projects = [
         {
             id: 1,
-            title: "Project One",
+            title: "Coming Soon",
             description: "Coming Soon",
             image: null,
             technologies: ["Coming Soon"],
@@ -15,7 +15,7 @@ const Projects = () => {
         },
         {
             id: 2,
-            title: "Project Two",
+            title: "Coming Soon",
             description: "Coming Soon",
             image: null,
             technologies: ["Coming Soon"],
@@ -24,7 +24,7 @@ const Projects = () => {
         },
         {
             id: 3,
-            title: "Project Three",
+            title: "Coming Soon",
             description: "Coming Soon",
             image: null,
             technologies: ["Coming Soon"],
