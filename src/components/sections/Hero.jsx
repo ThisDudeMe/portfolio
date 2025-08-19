@@ -1,53 +1,29 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import profile from '../../data/profile';
+import { scrollToSection } from '../../utils/scrollUtils';
 import '../../assets/styles/components/sections/hero.css';
 
 const Hero = () => {
-    const [displayText, setDisplayText] = useState('');
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [isDeleting, setIsDeleting] = useState(false);
-    const [charIndex, setCharIndex] = useState(0);
-
-    const texts = profile.typingTexts;
-
-    useEffect(() => {
-        const currentText = texts[currentIndex];
-        const typingSpeed = isDeleting ? 50 : 100;
-        const pauseTime = isDeleting ? 500 : 2000;
-
-        const timer = setTimeout(() => {
-            if (!isDeleting && charIndex < currentText.length) {
-                // Typing
-                setDisplayText(currentText.substring(0, charIndex + 1));
-                setCharIndex(charIndex + 1);
-            } else if (isDeleting && charIndex > 0) {
-                // Deleting
-                setDisplayText(currentText.substring(0, charIndex - 1));
-                setCharIndex(charIndex - 1);
-            } else if (!isDeleting && charIndex === currentText.length) {
-                // Finished typing, start deleting after pause
-                setTimeout(() => setIsDeleting(true), pauseTime);
-            } else if (isDeleting && charIndex === 0) {
-                // Finished deleting, move to next text
-                setIsDeleting(false);
-                setCurrentIndex((currentIndex + 1) % texts.length);
-            }
-        }, typingSpeed);
-
-        return () => clearTimeout(timer);
-    }, [charIndex, isDeleting, currentIndex, texts]);
+    const handleLearnMoreClick = () => {
+        scrollToSection('about');
+    };
 
     return (
         <section className="hero" id="home">
             <div className="hero-content">
                 <h1>
                     Hi! I'm {profile.name.split(' ')[0]} and I'm{' '}
-                    <span className="typing-text">
-                        {displayText}
-                        <span className="cursor">|</span>
+                    <span className="highlight-text">
+                        {profile.typingTexts[0]}
                     </span>
                 </h1>
-                <button className="cta-button">Learn More</button>
+                <button
+                    className="cta-button"
+                    onClick={handleLearnMoreClick}
+                    aria-label="Scroll to About section"
+                >
+                    Learn More
+                </button>
             </div>
         </section>
     );

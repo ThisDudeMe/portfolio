@@ -14,23 +14,9 @@
   color: var(--text-color);
 }
 
-.typing-text {
+.highlight-text {
   color: var(--standout-color);
   font-weight: bold;
-}
-
-.cursor {
-  color: var(--standout-color);
-  animation: blink 1s infinite;
-}
-
-@keyframes blink {
-  0%, 50% {
-    opacity: 1;
-  }
-  51%, 100% {
-    opacity: 0;
-  }
 }
 
 .cta-button {
@@ -43,4 +29,15 @@
 
 .cta-button:hover {
   background-color: var(--hover-highlight);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .hero {
+    padding: var(--spacing-large) var(--spacing-medium);
+  }
+  
+  .hero-content h1 {
+    font-size: calc(var(--font-size-xlarge) * 0.8);
+  }
 }

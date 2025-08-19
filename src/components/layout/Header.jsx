@@ -51,13 +51,13 @@ const Header = () => {
                             About
                         </a>
                         <ul className="dropdown-menu">
-                            <li><a href="#aboutMe" onClick={handleLinkClick}>About Me</a></li>
+                            <li><a href="#about-me" onClick={handleLinkClick}>About Me</a></li>
                             <li><a href="#skills" onClick={handleLinkClick}>Skills</a></li>
                             <li><a href="#experience" onClick={handleLinkClick}>Experience & Education</a></li>
                         </ul>
                     </li>
 
-                    <li className="dropdown">
+                    <li>
                         <a href="#projects" onClick={handleLinkClick}>
                             <IconHolder
                                 icon={navigationIcons.projects}
@@ -66,15 +66,9 @@ const Header = () => {
                             />
                             Projects
                         </a>
-                        <ul className="dropdown-menu">
-                            <li><a href="#web-projects" onClick={handleLinkClick}>Web Development</a></li>
-                            <li><a href="#mobile-projects" onClick={handleLinkClick}>Mobile Apps</a></li>
-                            <li><a href="#data-projects" onClick={handleLinkClick}>Data Science</a></li>
-                            <li><a href="#open-source" onClick={handleLinkClick}>Open Source</a></li>
-                        </ul>
                     </li>
 
-                    <li className="dropdown">
+                    <li>
                         <a href="#contact" onClick={handleLinkClick}>
                             <IconHolder
                                 icon={navigationIcons.contact}
@@ -83,66 +77,6 @@ const Header = () => {
                             />
                             Contact
                         </a>
-                        <ul className="dropdown-menu">
-                            <li>
-                                <a
-                                    href={`mailto:${profile.email}`}
-                                    onClick={handleLinkClick}
-                                >
-                                    <IconHolder
-                                        icon={socialIcons.email}
-                                        size="small"
-                                        className="dropdown-icon-holder"
-                                    />
-                                    Email
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href={profile.social.linkedin.url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    onClick={handleLinkClick}
-                                >
-                                    <IconHolder
-                                        icon={socialIcons.linkedin}
-                                        size="small"
-                                        className="dropdown-icon-holder"
-                                    />
-                                    LinkedIn
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href={profile.social.github.url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    onClick={handleLinkClick}
-                                >
-                                    <IconHolder
-                                        icon={socialIcons.github}
-                                        size="small"
-                                        className="dropdown-icon-holder"
-                                    />
-                                    GitHub
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href={profile.resume.url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    onClick={handleLinkClick}
-                                >
-                                    <IconHolder
-                                        icon={socialIcons.resume}
-                                        size="small"
-                                        className="dropdown-icon-holder"
-                                    />
-                                    Resume
-                                </a>
-                            </li>
-                        </ul>
                     </li>
                 </ul>
             </nav>
